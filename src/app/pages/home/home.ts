@@ -63,10 +63,17 @@ import { EventCalendar } from '../calendar/calendar';
   `,
   styles: [`
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/zonta-hero.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(128,0,6,0.85), rgba(128,0,6,0.85));
       color: white;
       padding: 6rem 2rem;
       text-align: center;
+      margin: 0;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
 
     .hero h1 {
