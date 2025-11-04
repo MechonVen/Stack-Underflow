@@ -23,13 +23,13 @@ import { RouterModule } from '@angular/router';
     </footer>
   `,
   styles: [`
-    :host { display: flex; flex-direction: column; min-height: 100vh; }
-    header { margin: 0; }
+    :host { display: flex; flex-direction: column; min-height: 100vh; width: 100%; }
+    header { margin: 0; width: 100%; }
     nav a.active { text-decoration: underline; }
-    nav { display: flex; gap: 1rem; background-color: #d4a017; padding: 1rem; color: #800006; }
+    nav { display: flex; gap: 1rem; background-color: #d4a017; padding: 1rem; color: #800006; width: 100%; box-sizing: border-box; }
     nav a { color: #800006; text-decoration: none; }
-    main { flex: 1; }
-    footer { background-color: #800006; text-align: center; padding: 1rem; color: white; margin: 0; }
+    main { flex: 1; width: 100%; }
+    footer { background-color: #800006; text-align: center; padding: 1rem; color: white; margin: 0; width: 100%; box-sizing: border-box; }
     footer a { color: white; }
   `]
 })
