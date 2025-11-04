@@ -1,27 +1,16 @@
 <div class="calendar-container">
-  <div class="calendar-controls">
-    <button (click)="previousMonth()" class="control-btn">← Previous</button>
-    <h3>{{ viewDate | date: 'MMMM yyyy' }}</h3>
-    <button (click)="nextMonth()" class="control-btn">Next →</button>
+  <div class="calendar-header">
+    <h3>Upcoming Events</h3>
   </div>
 
-  <mwl-calendar-month-view
-    [events]="events"
-    [viewDate]="viewDate"
-    (eventClicked)="onEventClick($event)"
-  ></mwl-calendar-month-view>
-
-  <div class="events-list">
-    <h4>Upcoming Events</h4>
-    <div *ngIf="events.length > 0; else noEvents" class="events-display">
-      <div *ngFor="let event of upcomingEvents" class="event-card">
-        <div class="event-title">{{ event.title }}</div>
-        <div class="event-date">{{ event.start | date: 'MMM d, yyyy' }}</div>
-        <div *ngIf="event.description" class="event-description">{{ event.description }}</div>
-      </div>
+  <div *ngIf="upcomingEvents.length > 0; else noEvents" class="events-display">
+    <div *ngFor="let event of upcomingEvents" class="event-card">
+      <div class="event-date">{{ event.start | date: 'MMM d, yyyy' }}</div>
+      <div class="event-title">{{ event.title }}</div>
+      <div *ngIf="event.description" class="event-description">{{ event.description }}</div>
     </div>
-    <ng-template #noEvents>
-      <p class="no-events">No upcoming events scheduled</p>
-    </ng-template>
   </div>
+  <ng-template #noEvents>
+    <p class="no-events">No upcoming events scheduled</p>
+  </ng-template>
 </div>

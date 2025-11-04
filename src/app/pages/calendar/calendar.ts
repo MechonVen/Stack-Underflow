@@ -1,23 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CalendarMonthViewComponent, CalendarWeekViewComponent, CalendarDayViewComponent, CalendarView } from 'angular-calendar';
 
 @Component({
   standalone: true,
   selector: 'app-calendar',
-  imports: [
-    CommonModule,
-    CalendarMonthViewComponent,
-    CalendarWeekViewComponent,
-    CalendarDayViewComponent
-  ],
+  imports: [CommonModule],
   templateUrl: './calendar.html',
   styleUrls: ['./calendar.scss']
 })
 export class EventCalendar {
-  CalendarView = CalendarView;
-  view: CalendarView = CalendarView.Month;
-  viewDate = new Date();
   events = [
     {
       start: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 7),
@@ -42,17 +33,5 @@ export class EventCalendar {
     return this.events
       .filter(event => new Date(event.start) >= today)
       .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
-  }
-
-  previousMonth(): void {
-    this.viewDate = new Date(this.viewDate.getFullYear(), this.viewDate.getMonth() - 1, 1);
-  }
-
-  nextMonth(): void {
-    this.viewDate = new Date(this.viewDate.getFullYear(), this.viewDate.getMonth() + 1, 1);
-  }
-
-  onEventClick(event: any): void {
-    console.log('Event clicked:', event);
   }
 }
