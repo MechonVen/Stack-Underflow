@@ -67,15 +67,15 @@ import { EventCalendar } from '../calendar/calendar';
     .hero {
       background: linear-gradient(rgba(128,0,6,0.85), rgba(128,0,6,0.85));
       color: white;
-      padding: 6rem, 2rem;
+      padding: 6rem 2rem;
       text-align: center;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
       min-height: 500px;
+      margin: 0;
     }
 
     .hero-text {
