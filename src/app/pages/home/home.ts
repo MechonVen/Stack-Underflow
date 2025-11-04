@@ -126,7 +126,6 @@ import { EventCalendar } from '../calendar/calendar';
 
     section {
       padding: 3rem 2rem;
-      max-width: 900px;
       margin: auto;
     }
 
