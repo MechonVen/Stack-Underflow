@@ -1,140 +1,63 @@
 .calendar-container {
   padding: 1rem 0;
-  
-  .calendar-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
+
+  .calendar-header {
+    margin-bottom: 1.5rem;
 
     h3 {
       margin: 0;
       color: #004080;
-      min-width: 150px;
-      text-align: center;
       font-size: 1.2rem;
     }
-
-    .control-btn {
-      padding: 0.6rem 1rem;
-      background-color: #d89b1d;
-      color: white;
-      border: none;
-      border-radius: 0.4rem;
-      cursor: pointer;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #c08a1a;
-      }
-    }
   }
 
-  ::ng-deep {
-    mwl-calendar-month-view {
-      display: block;
-      margin-bottom: 2rem;
-
-      .cal-days {
-        background-color: #f9f9f9;
-      }
-
-      .cal-day-numbers .cal-cell {
-        border: 1px solid #ddd;
-        background-color: white;
-      }
-
-      .cal-cell {
-        border: 1px solid #e0e0e0;
-      }
-
-      .cal-header {
-        background-color: #004080;
-        color: white;
-        font-weight: 600;
-      }
-
-      .cal-cell-row.cal-header .cal-cell {
-        background-color: #004080;
-        color: white;
-        padding: 0.5rem;
-      }
-
-      .cal-day-cell {
-        min-height: 80px;
-        padding: 0.5rem;
-      }
-
-      .cal-events {
-        margin-top: 0.25rem;
-      }
-
-      .cal-event {
-        background-color: #d89b1d;
-        color: white;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        font-size: 0.85rem;
-        cursor: pointer;
-        margin-bottom: 0.25rem;
-
-        &:hover {
-          background-color: #c08a1a;
-        }
-      }
-    }
+  .events-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
 
-  .events-list {
-    background-color: #f5f5f5;
+  .event-card {
+    background-color: white;
     padding: 1.5rem;
     border-radius: 0.5rem;
+    border-left: 4px solid #d89b1d;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    h4 {
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .event-date {
+      color: #d89b1d;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .event-title {
+      font-weight: 600;
       color: #004080;
-      margin-top: 0;
-      margin-bottom: 1rem;
       font-size: 1.1rem;
+      margin-bottom: 0.75rem;
     }
 
-    .events-display {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
+    .event-description {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
+  }
 
-    .event-card {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      border-left: 4px solid #d89b1d;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-      .event-title {
-        font-weight: 600;
-        color: #004080;
-        margin-bottom: 0.5rem;
-      }
-
-      .event-date {
-        color: #666;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .event-description {
-        color: #555;
-        font-size: 0.9rem;
-        line-height: 1.4;
-      }
-    }
-
-    .no-events {
-      text-align: center;
-      color: #999;
-      font-style: italic;
-    }
+  .no-events {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 2rem;
+    font-size: 1rem;
   }
 }
