@@ -67,10 +67,11 @@ import { EventCalendar } from '../calendar/calendar';
       color: white;
       padding: 6rem 2rem;
       text-align: center;
-      margin: 0 calc(-50vw + 50%);
-      width: 100vw;
+      width: 100%;
       display: flex;
       justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
     }
 
     .hero-text {
