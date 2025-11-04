@@ -144,7 +144,9 @@ import { EventCalendar } from '../calendar/calendar';
     h2 {
       color: #004080;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
     }
 
     .events ul {
