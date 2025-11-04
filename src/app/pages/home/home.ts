@@ -67,13 +67,15 @@ import { EventCalendar } from '../calendar/calendar';
       color: white;
       padding: 6rem 2rem;
       text-align: center;
-      margin: 0;
+      margin: 0 calc(-50vw + 50%);
       width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-text {
+      max-width: 900px;
+      width: 100%;
     }
 
     .hero h1 {
