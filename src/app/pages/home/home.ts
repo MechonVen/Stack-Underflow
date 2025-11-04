@@ -166,6 +166,18 @@ import { EventCalendar } from '../calendar/calendar';
       font-weight: 500;
       color: #004080;
     }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #004080;
+    }
   `]
 })
 export class Home {}
