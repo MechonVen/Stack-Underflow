@@ -28,7 +28,7 @@ import { RouterModule } from '@angular/router';
     nav a.active { text-decoration: underline; }
     nav { display: flex; gap: 1rem; background-color: #d4a017; padding: 1rem; color: #800006; }
     nav a { color: #800006; text-decoration: none; }
-    main { padding: 2rem; flex: 1; }
+    main { flex: 1; }
     footer { background-color: #800006; text-align: center; padding: 1rem; color: white; margin: 0; }
     footer a { color: white; }
   `]

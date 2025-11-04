@@ -114,6 +114,12 @@ import { EventCalendar } from '../calendar/calendar';
       margin: auto;
     }
 
+    .hero {
+      margin: 0;
+      max-width: 100%;
+      padding: 6rem 2rem;
+    }
+
     .impact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
