@@ -24,12 +24,12 @@ import { RouterModule } from '@angular/router';
   `,
   styles: [`
     :host { display: flex; flex-direction: column; min-height: 100vh; width: 100%; }
-    header { margin: 0; width: 100%; }
+    header { margin: 0; width: 100vw; margin-left: calc(-50vw + 50%); }
     nav a.active { text-decoration: underline; }
-    nav { display: flex; gap: 1rem; background-color: #d4a017; padding: 1rem; color: #800006; width: 100%; box-sizing: border-box; }
-    nav a { color: #800006; text-decoration: none; }
+    nav { display: flex; justify-content: center; gap: 2rem; background-color: #d4a017; padding: 1rem 2rem; color: #800006; width: 100%; box-sizing: border-box; }
+    nav a { color: #800006; text-decoration: none; padding: 0.5rem 0; }
     main { flex: 1; width: 100%; }
-    footer { background-color: #800006; text-align: center; padding: 1rem; color: white; margin: 0; width: 100%; box-sizing: border-box; }
+    footer { background-color: #800006; text-align: center; padding: 1rem; color: white; margin: 0; width: 100vw; margin-left: calc(-50vw + 50%); box-sizing: border-box; }
     footer a { color: white; }
   `]
 })
