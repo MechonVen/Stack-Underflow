@@ -62,6 +62,8 @@ import { EventCalendar } from '../calendar/calendar';
     </section>
   `,
   styles: [`
+    :host { display: contents; }
+
     .hero {
       background: linear-gradient(rgba(128,0,6,0.85), rgba(128,0,6,0.85));
       color: white;
