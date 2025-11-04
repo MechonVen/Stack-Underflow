@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-membership',
+  selector: 'app-service',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './membership.html',
-  styleUrl: './membership.scss',
+  templateUrl: './service.html',
+  styleUrl: './service.scss',
 })
-export class Membership {
+export class Service {
 
 }
+

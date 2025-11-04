@@ -10,9 +10,11 @@ import { RouterModule } from '@angular/router';
       <nav>
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         <a routerLink="/about" routerLinkActive="active">Who We Are</a>
+        <a routerLink="/service" routerLinkActive="active">Service</a>
+        <a routerLink="/advocacy" routerLinkActive="active">Advocacy</a>
         <a routerLink="/scholarships" routerLinkActive="active">Scholarships</a>
         <a routerLink="/membership" routerLinkActive="active">Membership</a>
-        <a routerLink="/store" routerLinkActive="active">Donate / Store</a>
+        <a routerLink="/zonta-in-action" routerLinkActive="active">Zonta in Action</a>
       </nav>
     </header>
 

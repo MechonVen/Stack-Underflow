@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-membership',
+  selector: 'app-zonta-in-action',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './membership.html',
-  styleUrl: './membership.scss',
+  templateUrl: './zonta-in-action.html',
+  styleUrl: './zonta-in-action.scss',
 })
-export class Membership {
+export class ZontaInAction {
 
 }
+

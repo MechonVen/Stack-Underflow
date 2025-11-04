@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-membership',
+  selector: 'app-advocacy',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './membership.html',
-  styleUrl: './membership.scss',
+  templateUrl: './advocacy.html',
+  styleUrl: './advocacy.scss',
 })
-export class Membership {
+export class Advocacy {
 
 }
+
