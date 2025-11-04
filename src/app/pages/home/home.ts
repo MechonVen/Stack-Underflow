@@ -75,16 +75,27 @@ import { EventCalendar } from '../calendar/calendar';
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
+      min-height: 500px;
     }
 
     .hero-text {
-      max-width: 900px;
+      max-width: 700px;
       width: 100%;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      font-weight: 400;
     }
 
     .cta-buttons {
