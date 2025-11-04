@@ -25,10 +25,56 @@ import { RouterModule } from '@angular/router';
     </footer>
   `,
   styles: [`
-    nav a.active { text-decoration: underline; }
-    nav { display: flex; gap: 1rem; background-color: #800006ff; padding: 1rem; color: #fff; }
+    nav {
+      display: flex;
+      gap: 1rem;
+      background-color: #eecd12ff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #a00505ff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #a00505ff;
+      transform: translateY(-2px);
+      shadow: 0 4px 12px rgba(77, 75, 75, 0.15);
+    }
+
+    nav a.active {
+      color: #e9e9e9ff;
+      shadow: 0 4px 12px rgba(77, 75, 75, 0.15);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
     main { padding: 2rem; }
-    footer { background-color: #f4f4f4; text-align: center; padding: 1rem; }
+
+    footer {
+      background-color: #f5f5f5;
+      color: #333;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    footer a {
+      color: #8b0000;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #a00000;
+    }
   `]
 })
 export class App {}
