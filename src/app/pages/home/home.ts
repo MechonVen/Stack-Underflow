@@ -105,9 +105,11 @@ import { EventCalendar } from '../calendar/calendar';
 
     .btn {
       text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 0.4rem;
       font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
 
     .btn.primary {
