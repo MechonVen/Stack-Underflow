@@ -96,6 +96,7 @@ import { EventCalendar } from '../calendar/calendar';
       line-height: 1.6;
       margin-bottom: 2rem;
       font-weight: 400;
+      color: white;
     }
 
     .cta-buttons {
