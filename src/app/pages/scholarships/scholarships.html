@@ -1,1 +1,95 @@
-<p>scholarships works!</p>
+<div class="scholarships-container">
+  <div class="scholarships-header">
+    <h1>Scholarships</h1>
+    <p>Empowering women through education and opportunity</p>
+  </div>
+
+  <!-- Available Scholarships Section -->
+  <section class="scholarships-section">
+    <h2>Available Scholarships</h2>
+    <div class="scholarships-grid">
+      <div class="scholarship-card" *ngFor="let scholarship of scholarships">
+        <div class="scholarship-header">
+          <h3 class="scholarship-name">{{ scholarship.name }}</h3>
+          <div class="scholarship-amount">{{ scholarship.amount }}</div>
+        </div>
+
+        <p class="scholarship-description">{{ scholarship.description }}</p>
+
+        <div class="scholarship-details">
+          <div class="eligibility">
+            <h4>Eligibility:</h4>
+            <ul>
+              <li *ngFor="let criterion of scholarship.eligibility">{{ criterion }}</li>
+            </ul>
+          </div>
+
+          <div class="deadline">
+            <strong>Application Deadline:</strong>
+            <p>{{ scholarship.deadline }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Forms Section -->
+  <section class="forms-section">
+    <h2>Application Materials</h2>
+    <p class="forms-intro">
+      Download the following forms to start your scholarship application. All forms should be submitted
+      by the listed deadline.
+    </p>
+
+    <div class="forms-grid">
+      <div class="form-card" *ngFor="let form of applicationForms">
+        <div class="form-content">
+          <h3 class="form-name">{{ form.name }}</h3>
+          <p class="form-description">{{ form.description }}</p>
+        </div>
+        <button class="download-button" (click)="downloadForm(form)">
+          <span class="download-icon">⬇</span> Download PDF
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Recipients Section -->
+  <section class="recipients-section">
+    <h2>Stories from Our Recipients</h2>
+    <p class="recipients-intro">
+      Meet the inspiring women who have benefited from Zonta Club Naples scholarships and are making
+      a difference in their communities.
+    </p>
+
+    <div class="recipients-grid">
+      <div class="recipient-card" *ngFor="let recipient of recipients">
+        <div class="recipient-image-wrapper">
+          <img [src]="recipient.image" [alt]="recipient.name" class="recipient-image" />
+        </div>
+
+        <div class="recipient-content">
+          <div class="recipient-header">
+            <h3 class="recipient-name">{{ recipient.name }}</h3>
+            <span class="recipient-year">{{ recipient.year }}</span>
+          </div>
+
+          <blockquote class="recipient-quote">{{ recipient.quote }}</blockquote>
+
+          <p class="recipient-story">{{ recipient.story }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Apply?</h2>
+      <p>Download the application materials above and submit your application before the deadline.</p>
+      <p class="cta-contact">
+        Have questions? <a href="mailto:info@zontanaples.org">Contact us</a> for more information.
+      </p>
+    </div>
+  </section>
+</div>
