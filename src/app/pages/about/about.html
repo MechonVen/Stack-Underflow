@@ -1,1 +1,114 @@
-<p>about works!</p>
+<div class="about-container">
+  <div class="about-header">
+    <h1>Who We Are</h1>
+    <p>Empowering women and fostering change in our community since 1990</p>
+  </div>
+
+  <!-- Our Story Section -->
+  <section class="story-section">
+    <div class="story-content">
+      <h2>Our Story</h2>
+      <p>
+        The Zonta Club of Naples was founded in 1990 by a group of dedicated women who envisioned a
+        community where women could support one another, advocate for equality, and make tangible
+        differences in the lives of other women. What started as a small gathering of 15 members has
+        grown into a thriving organization of over 200 women committed to our mission.
+      </p>
+      <p>
+        Affiliated with Zonta International, a global organization of professionals working to
+        advance the status of women worldwide, the Naples club has become a beacon of hope and
+        opportunity for women in our region. Through scholarships, mentorship, advocacy, and
+        community service, we continue to break barriers and create pathways for women to thrive.
+      </p>
+      <p>
+        Every member brings unique talents, experiences, and perspectives that enrich our
+        organization. Together, we believe in the power of women supporting women and are committed
+        to leaving a lasting legacy of positive change.
+      </p>
+    </div>
+
+    <div class="story-values">
+      <h3>Our Core Values</h3>
+      <div class="values-grid">
+        <div class="value-card">
+          <h4>Sisterhood</h4>
+          <p>We support and uplift one another, creating a safe space for growth and collaboration.</p>
+        </div>
+        <div class="value-card">
+          <h4>Empowerment</h4>
+          <p>We believe in providing women with tools, resources, and opportunities to achieve their goals.</p>
+        </div>
+        <div class="value-card">
+          <h4>Advocacy</h4>
+          <p>We champion women's rights and work to create systemic change in our community.</p>
+        </div>
+        <div class="value-card">
+          <h4>Excellence</h4>
+          <p>We strive for the highest standards in everything we do and lead by example.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team Section -->
+  <section class="leadership-section">
+    <h2>Our Leadership Team</h2>
+    <p class="leadership-intro">
+      Meet the dedicated women leading our organization and driving our mission forward.
+    </p>
+
+    <div class="team-grid">
+      <div class="team-member-card" *ngFor="let member of teamMembers">
+        <div class="team-image-wrapper">
+          <img [src]="member.image" [alt]="member.name" class="team-image" />
+        </div>
+
+        <div class="team-member-content">
+          <h3 class="team-member-name">{{ member.name }}</h3>
+          <div class="team-member-role">{{ member.role }}</div>
+          <p class="team-member-bio">{{ member.bio }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Updates Section -->
+  <section class="impact-section">
+    <h2>Our Community Impact</h2>
+    <p class="impact-intro">
+      From scholarships to advocacy, here's a snapshot of the positive change we've created in our
+      community.
+    </p>
+
+    <div class="impact-timeline">
+      <div class="impact-card" *ngFor="let update of impactUpdates">
+        <div class="impact-header">
+          <h3 class="impact-title">{{ update.title }}</h3>
+          <span class="impact-date">{{ update.date }}</span>
+        </div>
+
+        <p class="impact-description">{{ update.description }}</p>
+
+        <div class="impact-metric">
+          <strong>Impact:</strong>
+          <p>{{ update.impact }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Join Our Community</h2>
+      <p>
+        Are you interested in making a difference in the lives of women in Naples? We invite you to
+        join us!
+      </p>
+      <div class="cta-buttons">
+        <a href="/membership" class="cta-button primary">Learn About Membership</a>
+        <a href="/contact" class="cta-button secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+</div>
