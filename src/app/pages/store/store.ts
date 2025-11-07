@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 interface Product {
   id: string;
@@ -16,6 +17,8 @@ interface Product {
   styleUrl: './store.scss',
 })
 export class Store implements OnInit {
+  private platformId = inject(PLATFORM_ID);
+
   products: Product[] = [
     {
       id: 'zonta-shirt',
@@ -41,10 +44,12 @@ export class Store implements OnInit {
   ];
 
   ngOnInit() {
-    this.loadStripeScript();
+    if (isPlatformBrowser(this.platformId)) {
+      this.loadStripeScript();
+    }
   }
 
-  loadStripeScript() {
+  private loadStripeScript() {
     if (!(window as any).Stripe) {
       const script = document.createElement('script');
       script.src = 'https://js.stripe.com/v3/';
