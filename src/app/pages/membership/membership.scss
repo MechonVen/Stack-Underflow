@@ -1,0 +1,435 @@
+.membership-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.membership-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+}
+
+// Benefits Section
+.benefits-section {
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.benefits-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-title {
+  font-size: 1.2rem;
+  color: #2c5282;
+  margin: 0 0 0.5rem 0;
+}
+
+.benefit-description {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+// Info Section
+.info-section {
+  background: #f9f9f9;
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+}
+
+.info-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.info-item {
+  strong {
+    display: block;
+    color: #2c5282;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+// Application Section
+.application-section {
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.form-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.membership-form {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+}
+
+.form-full-width {
+  grid-column: 1 / -1;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #2c5282;
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+  }
+
+  &.is-invalid {
+    border-color: #d9534f;
+    background-color: #fef5f5;
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  label {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.form-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.25rem;
+  cursor: pointer;
+  accent-color: #2c5282;
+
+  &.is-invalid {
+    accent-color: #d9534f;
+  }
+}
+
+.checkbox-label {
+  color: #555;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.submit-message {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  background-color: #ecf0f1;
+  color: #27ae60;
+  border-left: 4px solid #27ae60;
+
+  &.error {
+    background-color: #fef5f5;
+    color: #d9534f;
+    border-left-color: #d9534f;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.submit-button,
+.reset-button {
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button {
+  background-color: #2c5282;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: #1e3a5f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+}
+
+.reset-button {
+  background-color: #ecf0f1;
+  color: #333;
+  border: 1px solid #ddd;
+
+  &:hover {
+    background-color: #d5dbdb;
+  }
+}
+
+.form-note {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  color: #856404;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+// Contact Section
+.contact-section {
+  background: linear-gradient(135deg, #2c5282 0%, #1e3a5f 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #ecf0f1;
+    text-decoration: underline;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .membership-container {
+    padding: 1.5rem;
+  }
+
+  .membership-header {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-details {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-form {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .submit-button,
+  .reset-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership-container {
+    padding: 1rem;
+  }
+
+  .membership-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .benefits-section h2,
+  .application-section h2,
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .membership-form {
+    padding: 1rem;
+  }
+
+  .form-actions {
+    gap: 0.5rem;
+  }
+
+  .submit-button,
+  .reset-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
