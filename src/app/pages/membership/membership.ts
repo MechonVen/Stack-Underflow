@@ -95,13 +95,16 @@ export class Membership implements OnInit {
 
     const formData = this.membershipForm.value;
     const emailBody = this.generateEmailBody(formData);
-    const mailtoLink = `mailto:membership@zontanaples.org?subject=Zonta Club Naples Membership Application - ${formData.firstName} ${formData.lastName}&body=${encodeURIComponent(emailBody)}`;
+    const subject = `Zonta Club Naples Membership Application - ${formData.firstName} ${formData.lastName}`;
+    const mailtoLink = `mailto:membership@zontanaples.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
     setTimeout(() => {
-      window.location.href = mailtoLink;
+      const link = document.createElement('a');
+      link.href = mailtoLink;
+      link.click();
       this.isLoading = false;
-      this.submitMessage = 'Please complete sending the email from your email client.';
-    }, 500);
+      this.submitMessage = 'Check your email client to send the application.';
+    }, 100);
   }
 
   private generateEmailBody(formData: any): string {
