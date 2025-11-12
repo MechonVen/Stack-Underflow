@@ -62,16 +62,41 @@ import { EventCalendar } from '../calendar/calendar';
     </section>
   `,
   styles: [`
+    :host { display: contents; }
+
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/zonta-hero.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(128,0,6,0.85), rgba(128,0,6,0.85));
       color: white;
       padding: 6rem 2rem;
       text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      min-height: 500px;
+      margin: 0;
+    }
+
+    .hero-text {
+      max-width: 700px;
+      width: 100%;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      color: white;
     }
 
     .cta-buttons {
@@ -81,9 +106,11 @@ import { EventCalendar } from '../calendar/calendar';
 
     .btn {
       text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 0.4rem;
       font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
 
     .btn.primary {
@@ -100,8 +127,11 @@ import { EventCalendar } from '../calendar/calendar';
 
     section {
       padding: 3rem 2rem;
-      max-width: 900px;
       margin: auto;
+    }
+
+    section:not(.hero) {
+      max-width: 900px;
     }
 
     .impact-grid {
@@ -114,7 +144,9 @@ import { EventCalendar } from '../calendar/calendar';
     h2 {
       color: #004080;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
     }
 
     .events ul {
@@ -132,6 +164,18 @@ import { EventCalendar } from '../calendar/calendar';
       text-align: right;
       margin-top: 1rem;
       font-weight: 500;
+      color: #004080;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
       color: #004080;
     }
   `]

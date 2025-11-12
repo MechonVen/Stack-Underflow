@@ -23,10 +23,14 @@ import { RouterModule } from '@angular/router';
     </footer>
   `,
   styles: [`
+    :host { display: flex; flex-direction: column; min-height: 100vh; width: 100%; margin: 0; }
+    header { margin: 0; padding: 0; }
     nav a.active { text-decoration: underline; }
-    nav { display: flex; gap: 1rem; background-color: #800006ff; padding: 1rem; color: #fff; }
-    main { padding: 2rem; }
-    footer { background-color: #f4f4f4; text-align: center; padding: 1rem; }
+    nav { display: flex; justify-content: center; gap: 2rem; background-color: #d4a017; padding: 1rem 2rem; color: #800006; width: 100%; box-sizing: border-box; margin: 0; }
+    nav a { color: #800006; text-decoration: none; padding: 0.5rem 0; }
+    main { flex: 1; width: 100%; padding: 0; margin: 0; }
+    footer { background-color: #800006; text-align: center; padding: 1rem; color: white; margin: 0; width: 100%; box-sizing: border-box; }
+    footer a { color: white; }
   `]
 })
 export class App {}
