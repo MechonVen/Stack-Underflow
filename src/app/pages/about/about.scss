@@ -21,6 +21,26 @@
   }
 }
 
+// Board of Directors Image Section
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.board-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.board-image {
+  max-width: 50%;
+  height: auto;
+  display: block;
+}
+
 // Our Story Section
 .story-section {
   margin-bottom: 4rem;
@@ -337,6 +357,10 @@
     p {
       font-size: 1rem;
     }
+  }
+
+  .content {
+    padding: 2rem 1rem;
   }
 
   .story-content {
