@@ -1,86 +1,95 @@
-<section class="scholarships-hero">
-  <h1>Scholarships</h1>
-  <p class="subtitle">Supporting Young Women in Their Educational Journey</p>
-</section>
-
-<section class="content">
-  <div class="intro">
-    <p>
-      The Zonta Club of Naples is committed to empowering young women through education.
-      We offer scholarships to help deserving students pursue their academic and career goals.
-    </p>
+<div class="scholarships-container">
+  <div class="scholarships-header">
+    <h1>Scholarships</h1>
+    <p>Empowering women through education and opportunity</p>
   </div>
 
-  <div class="scholarship-section">
+  <!-- Available Scholarships Section -->
+  <section class="scholarships-section">
     <h2>Available Scholarships</h2>
+    <div class="scholarships-grid">
+      <div class="scholarship-card" *ngFor="let scholarship of scholarships">
+        <div class="scholarship-header">
+          <h3 class="scholarship-name">{{ scholarship.name }}</h3>
+          <div class="scholarship-amount">{{ scholarship.amount }}</div>
+        </div>
 
-    <div class="scholarship-card">
-      <h3>Young Women in Public Affairs (YWPA) Award</h3>
-      <p>
-        This award recognizes young women, ages 16-19, who demonstrate a commitment to leadership,
-        volunteer service, and empowerment of women worldwide.
-      </p>
-      <ul>
-        <li><strong>Award Amount:</strong> Up to $5,000</li>
-        <li><strong>Eligibility:</strong> Women ages 16-19</li>
-        <li><strong>Deadline:</strong> March 1st annually</li>
-      </ul>
-    </div>
+        <p class="scholarship-description">{{ scholarship.description }}</p>
 
-    <div class="scholarship-card">
-      <h3>Jane M. Klausman Women in Business Scholarship</h3>
-      <p>
-        Supporting women pursuing undergraduate or master's degrees in business management who
-        demonstrate outstanding potential in the field.
-      </p>
-      <ul>
-        <li><strong>Award Amount:</strong> Up to $8,000</li>
-        <li><strong>Eligibility:</strong> Women in business programs</li>
-        <li><strong>Deadline:</strong> April 1st annually</li>
-      </ul>
-    </div>
+        <div class="scholarship-details">
+          <div class="eligibility">
+            <h4>Eligibility:</h4>
+            <ul>
+              <li *ngFor="let criterion of scholarship.eligibility">{{ criterion }}</li>
+            </ul>
+          </div>
 
-    <div class="scholarship-card">
-      <h3>Local Naples Scholarship</h3>
-      <p>
-        Our club offers local scholarships to Collier County students who demonstrate academic
-        excellence and commitment to community service.
-      </p>
-      <ul>
-        <li><strong>Award Amount:</strong> Varies</li>
-        <li><strong>Eligibility:</strong> Collier County residents</li>
-        <li><strong>Deadline:</strong> May 1st annually</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="application-section">
-    <h2>How to Apply</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Review Requirements</h3>
-        <p>Carefully read the eligibility criteria for each scholarship program.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Prepare Documents</h3>
-        <p>Gather transcripts, letters of recommendation, and personal statements.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Submit Application</h3>
-        <p>Complete and submit your application before the deadline.</p>
+          <div class="deadline">
+            <strong>Application Deadline:</strong>
+            <p>{{ scholarship.deadline }}</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="cta-section">
-    <h2>Questions?</h2>
-    <p>For more information about our scholarship programs, please contact us.</p>
-    <div class="cta-buttons">
-      <a href="mailto:scholarships@zontanaples.org" class="btn primary">Contact Us</a>
-      <a routerLink="/about" class="btn secondary">Learn More About Zonta</a>
+  <!-- Application Forms Section -->
+  <section class="forms-section">
+    <h2>Application Materials</h2>
+    <p class="forms-intro">
+      Download the following forms to start your scholarship application. All forms should be submitted
+      by the listed deadline.
+    </p>
+
+    <div class="forms-grid">
+      <div class="form-card" *ngFor="let form of applicationForms">
+        <div class="form-content">
+          <h3 class="form-name">{{ form.name }}</h3>
+          <p class="form-description">{{ form.description }}</p>
+        </div>
+        <button class="download-button" (click)="downloadForm(form)">
+          <span class="download-icon">⬇</span> Download PDF
+        </button>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Past Recipients Section -->
+  <section class="recipients-section">
+    <h2>Stories from Our Recipients</h2>
+    <p class="recipients-intro">
+      Meet the inspiring women who have benefited from Zonta Club Naples scholarships and are making
+      a difference in their communities.
+    </p>
+
+    <div class="recipients-grid">
+      <div class="recipient-card" *ngFor="let recipient of recipients">
+        <div class="recipient-image-wrapper">
+          <img [src]="recipient.image" [alt]="recipient.name" class="recipient-image" />
+        </div>
+
+        <div class="recipient-content">
+          <div class="recipient-header">
+            <h3 class="recipient-name">{{ recipient.name }}</h3>
+            <span class="recipient-year">{{ recipient.year }}</span>
+          </div>
+
+          <blockquote class="recipient-quote">{{ recipient.quote }}</blockquote>
+
+          <p class="recipient-story">{{ recipient.story }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Apply?</h2>
+      <p>Download the application materials above and submit your application before the deadline.</p>
+      <p class="cta-contact">
+        Have questions? <a href="mailto:info@zontanaples.org">Contact us</a> for more information.
+      </p>
+    </div>
+  </section>
+</div>

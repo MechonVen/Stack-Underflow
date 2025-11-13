@@ -1,1 +1,22 @@
-<p>store works!</p>
+<div class="store-container">
+  <div class="store-header">
+    <h1>Zonta Club Naples Store</h1>
+    <p>Support our mission by purchasing quality merchandise</p>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-image-wrapper">
+        <img [src]="product.image" [alt]="product.name" class="product-image" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="product-footer">
+          <span class="product-price">${{ product.price.toFixed(2) }}</span>
+          <button class="checkout-button" (click)="checkout(product)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

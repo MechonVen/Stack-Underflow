@@ -1,124 +1,271 @@
-<section class="membership-hero">
-  <h1>Membership</h1>
-  <p class="subtitle">Join a Global Network of Women Empowering Women</p>
-</section>
-
-<section class="content">
-  <div class="intro">
-    <p>
-      Become part of a dynamic organization of professional women dedicated to empowering women and girls
-      through service and advocacy. Membership in the Zonta Club of Naples offers opportunities for personal
-      growth, professional development, and meaningful community impact.
-    </p>
+<div class="membership-container">
+  <div class="membership-header">
+    <h1>Join Our Community</h1>
+    <p>Become part of a dynamic organization empowering women and creating lasting change</p>
   </div>
 
-  <div class="benefits-section">
+  <!-- Benefits Section -->
+  <section class="benefits-section">
     <h2>Membership Benefits</h2>
+    <p class="benefits-intro">
+      When you join the Zonta Club of Naples, you gain access to exclusive benefits, meaningful opportunities, and a supportive community of women leaders.
+    </p>
+
     <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="icon">🤝</div>
-        <h3>Networking</h3>
-        <p>Connect with professional women from diverse backgrounds and industries in Collier County and beyond.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">💼</div>
-        <h3>Professional Development</h3>
-        <p>Enhance your leadership skills through service projects, committee work, and leadership opportunities.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">🌍</div>
-        <h3>Global Connection</h3>
-        <p>Join a worldwide network of 29,000+ Zonta members in 63 countries working toward common goals.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">❤️</div>
-        <h3>Meaningful Impact</h3>
-        <p>Make a real difference in the lives of women and girls through hands-on service and advocacy.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">🎓</div>
-        <h3>Learning Opportunities</h3>
-        <p>Attend programs, workshops, and conferences focused on women's issues and leadership development.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">👥</div>
-        <h3>Friendship</h3>
-        <p>Build lasting friendships with like-minded women who share your commitment to service.</p>
+      <div class="benefit-card" *ngFor="let benefit of benefits">
+        <div class="benefit-icon">{{ benefit.icon }}</div>
+        <h3 class="benefit-title">{{ benefit.title }}</h3>
+        <p class="benefit-description">{{ benefit.description }}</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="requirements-section">
-    <h2>Membership Requirements</h2>
-    <p>
-      The Zonta Club of Naples welcomes professional women who are committed to our mission of empowering
-      women and girls. Prospective members should:
+  <!-- Membership Info Section -->
+  <section class="info-section">
+    <div class="info-content">
+      <h2>Membership Information</h2>
+      <div class="info-details">
+        <div class="info-item">
+          <strong>Annual Membership Fee:</strong>
+          <p>$150/year</p>
+        </div>
+        <div class="info-item">
+          <strong>Meeting Schedule:</strong>
+          <p>Monthly meetings held on the 2nd Wednesday of each month at 6:00 PM</p>
+        </div>
+        <div class="info-item">
+          <strong>Membership Requirements:</strong>
+          <p>
+            Be a woman of legal age, support our mission, and commit to attending meetings and participating in club activities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form Section -->
+  <section class="application-section">
+    <h2>Membership Application</h2>
+    <p class="form-intro">
+      Fill out the form below to apply for membership. Upon submission, your application will be sent to our Membership Chair for review.
     </p>
-    <ul>
-      <li>Be a professional woman with a record of achievement in their career or community</li>
-      <li>Demonstrate a commitment to advancing the status of women</li>
-      <li>Be willing to actively participate in club activities and service projects</li>
-      <li>Attend regular club meetings and events</li>
-      <li>Pay annual membership dues</li>
-      <li>Uphold the values and mission of Zonta International</li>
-    </ul>
-  </div>
 
-  <div class="process-section">
-    <h2>How to Join</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Express Interest</h3>
-        <p>Contact us to express your interest in membership and learn more about our club.</p>
+    <form [formGroup]="membershipForm" (ngSubmit)="onSubmit()" class="membership-form">
+      <div class="form-section">
+        <h3>Personal Information</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input
+              id="firstName"
+              type="text"
+              formControlName="firstName"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['firstName'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['firstName'].invalid">
+              First name is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input
+              id="lastName"
+              type="text"
+              formControlName="lastName"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['lastName'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['lastName'].invalid">
+              Last name is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['email'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['email'].invalid">
+              Valid email is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input
+              id="phone"
+              type="tel"
+              formControlName="phone"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['phone'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['phone'].invalid">
+              Phone number is required
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Attend as a Guest</h3>
-        <p>Visit one of our meetings as a guest to meet our members and learn about our activities.</p>
+
+      <div class="form-section">
+        <h3>Professional Information</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="profession">Profession *</label>
+            <input
+              id="profession"
+              type="text"
+              formControlName="profession"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['profession'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['profession'].invalid">
+              Profession is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company/Organization</label>
+            <input id="company" type="text" formControlName="company" class="form-input" />
+          </div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Submit Application</h3>
-        <p>Complete a membership application with sponsorship from a current member.</p>
+
+      <div class="form-section">
+        <h3>Address Information</h3>
+
+        <div class="form-row">
+          <div class="form-group form-full-width">
+            <label for="address">Street Address *</label>
+            <input
+              id="address"
+              type="text"
+              formControlName="address"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['address'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['address'].invalid">
+              Address is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input
+              id="city"
+              type="text"
+              formControlName="city"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['city'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['city'].invalid">
+              City is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="state">State *</label>
+            <input
+              id="state"
+              type="text"
+              formControlName="state"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['state'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['state'].invalid">
+              State is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="zipCode">Zip Code *</label>
+            <input
+              id="zipCode"
+              type="text"
+              formControlName="zipCode"
+              class="form-input"
+              [class.is-invalid]="formSubmitted && f['zipCode'].invalid"
+            />
+            <span class="error-message" *ngIf="formSubmitted && f['zipCode'].invalid">
+              Zip code is required
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-number">4</div>
-        <h3>Join Our Club</h3>
-        <p>Upon approval, you'll be welcomed as a new member and begin your Zonta journey!</p>
+
+      <div class="form-section">
+        <h3>About You</h3>
+
+        <div class="form-group form-full-width">
+          <label for="whyJoin">Why do you want to join Zonta Club of Naples? *</label>
+          <textarea
+            id="whyJoin"
+            formControlName="whyJoin"
+            class="form-textarea"
+            rows="5"
+            [class.is-invalid]="formSubmitted && f['whyJoin'].invalid"
+          ></textarea>
+          <span class="error-message" *ngIf="formSubmitted && f['whyJoin'].invalid">
+            Please tell us why you want to join (minimum 20 characters)
+          </span>
+        </div>
       </div>
+
+      <div class="form-section">
+        <div class="form-group checkbox">
+          <input
+            id="agreeToTerms"
+            type="checkbox"
+            formControlName="agreeToTerms"
+            class="form-checkbox"
+            [class.is-invalid]="formSubmitted && f['agreeToTerms'].invalid"
+          />
+          <label for="agreeToTerms" class="checkbox-label">
+            I agree to support the mission and values of Zonta Club of Naples and Zonta International *
+          </label>
+          <span class="error-message" *ngIf="formSubmitted && f['agreeToTerms'].invalid">
+            You must agree to the terms to proceed
+          </span>
+        </div>
+      </div>
+
+      <div *ngIf="submitMessage" class="submit-message" [class.error]="formSubmitted && membershipForm.invalid">
+        {{ submitMessage }}
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-button" [disabled]="isLoading">
+          {{ isLoading ? 'Sending...' : 'Submit Application' }}
+        </button>
+        <button type="button" class="reset-button" (click)="resetForm()">Clear Form</button>
+      </div>
+    </form>
+
+    <div class="form-note">
+      <p>
+        <strong>Note:</strong> After submitting your application, your email client will open to send the form to our Membership Chair. Please complete sending the email to finalize your application submission.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <div class="types-section">
-    <h2>Membership Types</h2>
-    <div class="types-grid">
-      <div class="type-card">
-        <h3>Active Membership</h3>
-        <p>
-          Full membership with voting rights and the opportunity to hold office. Active members participate
-          in all club activities and contribute to decision-making.
-        </p>
-      </div>
-      <div class="type-card">
-        <h3>Honorary Membership</h3>
-        <p>
-          Recognizes individuals who have made significant contributions to Zonta's mission. Honorary members
-          are exempt from dues but may participate in club activities.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="cta-section">
-    <h2>Ready to Make a Difference?</h2>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Questions?</h2>
     <p>
-      Join the Zonta Club of Naples and become part of a global movement empowering women and girls.
-      Contact us today to learn more about membership opportunities.
+      If you have any questions about membership, feel free to reach out to our Membership Chair at
+      <a href="mailto:membership@zontanaples.org">membership@zontanaples.org</a> or call us at
+      <a href="tel:+12395551234">(239) 555-1234</a>.
     </p>
-    <div class="cta-buttons">
-      <a href="mailto:membership@zontanaples.org" class="btn primary">Contact Us About Membership</a>
-      <a routerLink="/about" class="btn secondary">Learn More About Zonta</a>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
