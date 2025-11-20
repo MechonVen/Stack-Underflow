@@ -1,0 +1,148 @@
+<div class="volunteer-container">
+  <div class="volunteer-header">
+    <h1>Volunteer With Us</h1>
+    <p>
+      Share your time, skills, and passion to support women and girls in our community.
+    </p>
+  </div>
+
+  <section class="volunteer-intro">
+    <p>
+      Complete the form below to let us know how you would like to be involved.
+      Our service team will follow up with next steps and upcoming opportunities.
+    </p>
+  </section>
+
+  <section class="volunteer-form-section">
+    <h2>Volunteer Registration</h2>
+
+    <form
+      #volunteerFormElement
+      [formGroup]="volunteerForm"
+      (ngSubmit)="onSubmit()"
+      class="volunteer-form"
+      action="https://formspree.io/f/xyzojbbj"
+      method="POST"
+    >
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            formControlName="name"
+            class="form-input"
+            [class.is-invalid]="formSubmitted && f['name'].invalid"
+          />
+          <span class="error-message" *ngIf="formSubmitted && f['name'].invalid">
+            Name is required
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            formControlName="email"
+            class="form-input"
+            [class.is-invalid]="formSubmitted && f['email'].invalid"
+          />
+          <span class="error-message" *ngIf="formSubmitted && f['email'].invalid">
+            A valid email address is required
+          </span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            formControlName="phone"
+            class="form-input"
+          />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-group form-full-width">
+          <label for="availability">Availability *</label>
+          <textarea
+            id="availability"
+            name="availability"
+            formControlName="availability"
+            rows="3"
+            class="form-textarea"
+            [class.is-invalid]="formSubmitted && f['availability'].invalid"
+          ></textarea>
+          <span class="error-message" *ngIf="formSubmitted && f['availability'].invalid">
+            Please let us know when you are generally available to volunteer
+          </span>
+        </div>
+
+        <div class="form-group form-full-width">
+          <label for="interests">Skills &amp; Areas of Interest *</label>
+          <textarea
+            id="interests"
+            name="interests"
+            formControlName="interests"
+            rows="4"
+            class="form-textarea"
+            [class.is-invalid]="formSubmitted && f['interests'].invalid"
+          ></textarea>
+          <span class="error-message" *ngIf="formSubmitted && f['interests'].invalid">
+            Please share how you would like to help (skills, interests, preferred projects)
+          </span>
+        </div>
+
+        <div class="form-group form-full-width">
+          <label for="comments">Additional Information</label>
+          <textarea
+            id="comments"
+            name="comments"
+            formControlName="comments"
+            rows="3"
+            class="form-textarea"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-group checkbox">
+          <input
+            id="agreeToContact"
+            type="checkbox"
+            name="agreeToContact"
+            formControlName="agreeToContact"
+            class="form-checkbox"
+            [class.is-invalid]="formSubmitted && f['agreeToContact'].invalid"
+          />
+          <label for="agreeToContact" class="checkbox-label">
+            I agree that Zonta Club of Naples may contact me about volunteer opportunities. *
+          </label>
+        </div>
+        <span class="error-message" *ngIf="formSubmitted && f['agreeToContact'].invalid">
+          You must agree in order for us to contact you.
+        </span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-button">
+          Submit Volunteer Form
+        </button>
+        <button type="button" class="reset-button" (click)="resetForm()">Clear Form</button>
+      </div>
+    </form>
+
+    <p class="volunteer-note">
+      Your information will be sent securely using a third-party form service and delivered to our volunteer coordinator
+      at nle1252@eagle.fgcu.edu.
+    </p>
+  </section>
+</div>
+

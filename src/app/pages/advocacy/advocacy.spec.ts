@@ -1,4 +1,6 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { Advocacy } from './advocacy';
 
@@ -8,7 +10,8 @@ describe('Advocacy', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Advocacy]
+      imports: [Advocacy],
+      providers: [provideZonelessChangeDetection(), provideRouter([])]
     })
     .compileComponents();
 

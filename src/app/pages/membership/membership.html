@@ -250,6 +250,28 @@
         </button>
         <button type="button" class="reset-button" (click)="resetForm()">Clear Form</button>
       </div>
+
+      <div class="payment-section">
+        <h3>Membership Payment</h3>
+        <p>
+          After submitting your application, you can pay your annual membership fee of $150 securely online using
+          Stripe Checkout.
+        </p>
+        <div *ngIf="paymentMessage" class="submit-message">
+          {{ paymentMessage }}
+        </div>
+        <div *ngIf="paymentError" class="submit-message error">
+          {{ paymentError }}
+        </div>
+        <button
+          type="button"
+          class="submit-button"
+          (click)="checkoutMembership()"
+          [disabled]="isProcessingPayment"
+        >
+          {{ isProcessingPayment ? 'Redirecting to Payment...' : 'Pay Membership Fee ($150)' }}
+        </button>
+      </div>
     </form>
 
     <div class="form-note">

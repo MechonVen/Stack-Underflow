@@ -1,20 +1,19 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventCalendar } from './calendar';
+import { Volunteer } from './volunteer';
 
-describe('Calendar', () => {
-  let component: EventCalendar;
-  let fixture: ComponentFixture<EventCalendar>;
+describe('Volunteer', () => {
+  let component: Volunteer;
+  let fixture: ComponentFixture<Volunteer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EventCalendar],
-      providers: [provideZonelessChangeDetection()]
-    })
-    .compileComponents();
+      imports: [Volunteer],
+      providers: [provideZonelessChangeDetection()],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(EventCalendar);
+    fixture = TestBed.createComponent(Volunteer);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,3 +22,4 @@ describe('Calendar', () => {
     expect(component).toBeTruthy();
   });
 });
+
