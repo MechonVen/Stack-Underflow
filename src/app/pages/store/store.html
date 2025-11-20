@@ -4,17 +4,91 @@
     <p>Support our mission by purchasing quality merchandise</p>
   </div>
 
-  <div class="products-grid">
-    <div class="product-card" *ngFor="let product of products">
-      <div class="product-image-wrapper">
-        <img [src]="product.image" [alt]="product.name" class="product-image" />
+  <div class="store-content">
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of products">
+        <div class="product-image-wrapper">
+          <img [src]="product.image" [alt]="product.name" class="product-image" />
+        </div>
+        <div class="product-content">
+          <h2 class="product-name">{{ product.name }}</h2>
+          <p class="product-description">{{ product.description }}</p>
+          <div class="product-footer">
+            <span class="product-price">${{ product.price.toFixed(2) }}</span>
+            <button class="checkout-button" type="button" (click)="addToCart(product)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="product-content">
-        <h2 class="product-name">{{ product.name }}</h2>
-        <p class="product-description">{{ product.description }}</p>
-        <div class="product-footer">
-          <span class="product-price">${{ product.price.toFixed(2) }}</span>
-          <button class="checkout-button" (click)="checkout(product)">Add to Cart</button>
+    </div>
+
+    <div class="cart-panel">
+      <h2>Shopping Cart</h2>
+
+      <p *ngIf="cart.length === 0" class="cart-empty">
+        Your cart is empty. Add items to begin checkout.
+      </p>
+
+      <div *ngIf="cart.length > 0" class="cart-items">
+        <div class="cart-item" *ngFor="let item of cart">
+          <div class="cart-item-info">
+            <div class="cart-item-name">{{ item.product.name }}</div>
+            <div class="cart-item-quantity">
+              <button
+                type="button"
+                class="qty-button"
+                (click)="decreaseQuantity(item.product.id)"
+              >
+                -
+              </button>
+              <span class="qty-value">{{ item.quantity }}</span>
+              <button
+                type="button"
+                class="qty-button"
+                (click)="increaseQuantity(item.product.id)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="cart-item-price">
+            ${{ (item.product.price * item.quantity).toFixed(2) }}
+          </div>
+          <button
+            type="button"
+            class="cart-remove-button"
+            (click)="removeFromCart(item.product.id)"
+          >
+            Remove
+          </button>
+        </div>
+
+        <div class="cart-summary">
+          <div class="cart-total">
+            Total: ${{ cartTotal.toFixed(2) }}
+          </div>
+        </div>
+
+        <div *ngIf="paymentMessage" class="submit-message">
+          {{ paymentMessage }}
+        </div>
+        <div *ngIf="paymentError" class="submit-message error">
+          {{ paymentError }}
+        </div>
+
+        <div class="cart-actions">
+          <button
+            type="button"
+            class="checkout-button"
+            (click)="checkoutCart()"
+            [disabled]="isProcessingPayment"
+          >
+            {{ isProcessingPayment ? 'Redirecting to Payment...' : 'Checkout with Stripe' }}
+          </button>
+          <button type="button" class="reset-button" (click)="clearCart()">
+            Clear Cart
+          </button>
         </div>
       </div>
     </div>

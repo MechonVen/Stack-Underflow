@@ -1,4 +1,6 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { ZontaInAction } from './zonta-in-action';
 
@@ -8,7 +10,8 @@ describe('ZontaInAction', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ZontaInAction]
+      imports: [ZontaInAction],
+      providers: [provideZonelessChangeDetection(), provideRouter([])]
     })
     .compileComponents();
 
