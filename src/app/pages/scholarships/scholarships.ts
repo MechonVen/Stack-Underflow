@@ -69,39 +69,6 @@ export class Scholarships {
     },
   ];
 
-  recipients: Recipient[] = [
-    {
-      id: 'recipient-1',
-      name: 'Sarah Johnson',
-      year: 2023,
-      quote:
-        'This scholarship gave me the opportunity to pursue my dreams in engineering without financial burden.',
-      story:
-        'Sarah graduated with a degree in Civil Engineering and now works on sustainable infrastructure projects. She credits the Amelia Earhart Fellowship with helping her focus on her studies.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
-    },
-    {
-      id: 'recipient-2',
-      name: 'Maria Rodriguez',
-      year: 2023,
-      quote:
-        'The support from Zonta helped me launch my nonprofit focused on women empowerment in underserved communities.',
-      story:
-        'Maria founded an organization that provides mentorship to young women from low-income backgrounds. The Jane Addams Fellowship was instrumental in helping her establish and grow her initiative.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-    },
-    {
-      id: 'recipient-3',
-      name: 'Jessica Chen',
-      year: 2024,
-      quote:
-        'As a first-generation college student, this scholarship removed barriers and let me dream bigger.',
-      story:
-        'Jessica is pursuing a business degree and has already started her own consulting firm. The Young Women in Business scholarship enabled her to dedicate more time to her academic and entrepreneurial goals.',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
-    },
-  ];
-
   applicationForms: ApplicationForm[] = [
     {
       id: 'general-application',
