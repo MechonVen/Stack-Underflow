@@ -10,15 +10,6 @@ interface Scholarship {
   deadline: string;
 }
 
-interface Recipient {
-  id: string;
-  name: string;
-  year: number;
-  quote: string;
-  story: string;
-  image: string;
-}
-
 interface ApplicationForm {
   id: string;
   name: string;
