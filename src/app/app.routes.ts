@@ -7,6 +7,7 @@ import { Scholarships } from './pages/scholarships/scholarships';
 import { Membership } from './pages/membership/membership';
 import { ZontaInAction } from './pages/zonta-in-action/zonta-in-action';
 import { Store } from './pages/store/store';
+import { Volunteer } from './pages/volunteer/volunteer';
 import { NotFound } from './pages/not-found/not-found';
 
 export const routes: Routes = [
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'advocacy', component: Advocacy },
   { path: 'scholarships', component: Scholarships },
   { path: 'membership', component: Membership },
+  { path: 'volunteer', component: Volunteer },
   { path: 'zonta-in-action', component: ZontaInAction },
   { path: 'store', component: Store },
   { path: '**', component: NotFound },

@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
         <a routerLink="/advocacy" routerLinkActive="active">Advocacy</a>
         <a routerLink="/scholarships" routerLinkActive="active">Scholarships</a>
         <a routerLink="/membership" routerLinkActive="active">Membership</a>
+        <a routerLink="/volunteer" routerLinkActive="active">Volunteer</a>
         <a routerLink="/zonta-in-action" routerLinkActive="active">Zonta in Action</a>
       </nav>
     </header>
