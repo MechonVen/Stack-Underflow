@@ -55,7 +55,7 @@ import { EventCalendar } from '../calendar/calendar';
           <h3>🤝 Community Service</h3>
           <p>Partnering with local organizations to uplift women in need.</p>
           <div class="cta-buttons">
-          <a routerLink="/scholarships" class="btn primary">Sign Up</a>
+          <a routerLink="/volunteer" class="btn primary">Sign Up</a>
           </div>
         </div>
       </div>
