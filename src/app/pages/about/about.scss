@@ -111,86 +111,25 @@
   }
 }
 
-// Leadership Section
-.leadership-section {
-  margin-bottom: 4rem;
+// Leadership Intro Section
+.leadership-intro-section {
+  margin-bottom: 2rem;
+  text-align: center;
 
   h2 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 1rem;
-    text-align: center;
   }
 }
 
 .leadership-intro {
   text-align: center;
   color: #666;
-  margin-bottom: 2rem;
+  margin: 0;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.team-member-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-  &:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-4px);
-  }
-}
-
-.team-image-wrapper {
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  background: #f5f5f5;
-}
-
-.team-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-
-  .team-member-card:hover & {
-    transform: scale(1.05);
-  }
-}
-
-.team-member-content {
-  padding: 1.5rem;
-}
-
-.team-member-name {
-  font-size: 1.2rem;
-  color: #2c5282;
-  margin: 0 0 0.5rem 0;
-}
-
-.team-member-role {
-  font-size: 0.95rem;
-  color: #d9534f;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.team-member-bio {
-  color: #666;
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
 }
 
 // Impact Section
@@ -371,7 +310,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .team-grid,
   .impact-timeline {
     grid-template-columns: 1fr;
   }
@@ -400,14 +338,6 @@
 
   .values-grid {
     grid-template-columns: 1fr;
-  }
-
-  .team-image-wrapper {
-    height: 200px;
-  }
-
-  .team-member-name {
-    font-size: 1.1rem;
   }
 
   .impact-header {
