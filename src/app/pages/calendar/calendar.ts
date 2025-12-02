@@ -71,10 +71,6 @@ export class EventCalendar implements OnInit {
   }
 
   get upcomingEvents() {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return this.events
-      .filter(event => new Date(event.start) >= today)
-      .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
+    return this.events.sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
   }
 }
