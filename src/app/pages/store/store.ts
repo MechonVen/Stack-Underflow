@@ -31,22 +31,22 @@ export class Store implements OnInit {
       description:
         'Classic Zonta Club Naples branded shirt. High-quality cotton blend for comfort and durability.',
       price: 25.0,
-      image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff982a053b7a54180884f6ee8a9cbde51%2Fcac1d63ee85c47bd8ad0374e8bdcf11b?format=webp&width=800',
     },
     {
-      id: 'zonta-mug',
-      name: 'Zonta Mug',
+      id: 'zonta-tumbler',
+      name: 'Zonta Tumbler',
       description:
-        'Perfect for your morning coffee. Dishwasher safe ceramic mug with Zonta Club Naples logo.',
+        'Keep your beverages at the perfect temperature. Durable insulated tumbler with Zonta Club International branding.',
       price: 12.0,
-      image: 'https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=400&h=400&fit=crop',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff982a053b7a54180884f6ee8a9cbde51%2Fc046c0632bf54b15ae8d13197760d3c5?format=webp&width=800',
     },
     {
       id: 'zonta-pen',
       name: 'Zonta Pen',
       description: 'Premium writing instrument. Smooth ballpoint pen with Zonta Club branding.',
       price: 8.0,
-      image: 'https://images.unsplash.com/photo-1595521624512-a8247dd4d3f1?w=400&h=400&fit=crop',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff982a053b7a54180884f6ee8a9cbde51%2Ff27b7ebe9aba4861a7e773a5029d6be3?format=webp&width=800',
     },
   ];
 
