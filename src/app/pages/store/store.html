@@ -4,93 +4,128 @@
     <p>Support our mission by purchasing quality merchandise</p>
   </div>
 
-  <div class="store-content">
-    <div class="products-grid">
-      <div class="product-card" *ngFor="let product of products">
-        <div class="product-image-wrapper">
-          <img [src]="product.image" [alt]="product.name" class="product-image" />
+  <div class="store-layout">
+    <!-- Products Section (Left) -->
+    <div class="products-section">
+      <div class="products-grid">
+        <div class="product-card" *ngFor="let product of products">
+          <div class="product-image-wrapper">
+            <img [src]="product.image" [alt]="product.name" class="product-image" />
+          </div>
+          <div class="product-content">
+            <h2 class="product-name">{{ product.name }}</h2>
+            <p class="product-description">{{ product.description }}</p>
+            <div class="product-footer">
+              <span class="product-price">${{ product.price.toFixed(2) }}</span>
+              <button class="add-to-cart-button" type="button" (click)="addToCart(product)">
+                <span class="button-icon">+</span>
+                Add to Cart
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="product-content">
-          <h2 class="product-name">{{ product.name }}</h2>
-          <p class="product-description">{{ product.description }}</p>
-          <div class="product-footer">
-            <span class="product-price">${{ product.price.toFixed(2) }}</span>
-            <button class="checkout-button" type="button" (click)="addToCart(product)">
-              Add to Cart
+      </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar (Right) -->
+    <aside class="cart-sidebar">
+      <div class="cart-panel">
+        <div class="cart-header">
+          <h2 class="cart-title">
+            <span class="cart-icon">🛒</span>
+            Shopping Cart
+          </h2>
+          <span class="cart-badge" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
+        </div>
+
+        <div class="cart-body">
+          <div *ngIf="cart.length === 0" class="cart-empty">
+            <div class="cart-empty-icon">🛍️</div>
+            <p>Your cart is empty</p>
+            <span class="cart-empty-hint">Add items to begin checkout</span>
+          </div>
+
+          <div *ngIf="cart.length > 0" class="cart-items">
+            <div class="cart-item" *ngFor="let item of cart">
+              <div class="cart-item-details">
+                <div class="cart-item-name">{{ item.product.name }}</div>
+                <div class="cart-item-unit-price">${{ item.product.price.toFixed(2) }} each</div>
+              </div>
+              <div class="cart-item-controls">
+                <div class="cart-item-quantity">
+                  <button
+                    type="button"
+                    class="qty-button"
+                    (click)="decreaseQuantity(item.product.id)"
+                    aria-label="Decrease quantity"
+                  >
+                    −
+                  </button>
+                  <span class="qty-value">{{ item.quantity }}</span>
+                  <button
+                    type="button"
+                    class="qty-button"
+                    (click)="increaseQuantity(item.product.id)"
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="cart-item-price">
+                  ${{ (item.product.price * item.quantity).toFixed(2) }}
+                </div>
+              </div>
+              <button
+                type="button"
+                class="cart-remove-button"
+                (click)="removeFromCart(item.product.id)"
+                aria-label="Remove item"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="cart.length > 0" class="cart-footer">
+          <div class="cart-summary">
+            <div class="cart-summary-row">
+              <span>Subtotal ({{ cartItemCount }} items)</span>
+              <span>${{ cartTotal.toFixed(2) }}</span>
+            </div>
+            <div class="cart-divider"></div>
+            <div class="cart-total">
+              <span>Total</span>
+              <span class="total-amount">${{ cartTotal.toFixed(2) }}</span>
+            </div>
+          </div>
+
+          <div *ngIf="paymentMessage" class="submit-message success">
+            <span class="message-icon">✓</span>
+            {{ paymentMessage }}
+          </div>
+          <div *ngIf="paymentError" class="submit-message error">
+            <span class="message-icon">!</span>
+            {{ paymentError }}
+          </div>
+
+          <div class="cart-actions">
+            <button
+              type="button"
+              class="checkout-button"
+              (click)="checkoutCart()"
+              [disabled]="isProcessingPayment"
+            >
+              <span *ngIf="!isProcessingPayment">Checkout with Stripe</span>
+              <span *ngIf="isProcessingPayment" class="loading-spinner"></span>
+              <span *ngIf="isProcessingPayment">Redirecting...</span>
+            </button>
+            <button type="button" class="clear-cart-button" (click)="clearCart()">
+              Clear Cart
             </button>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="cart-panel">
-      <h2>Shopping Cart</h2>
-
-      <p *ngIf="cart.length === 0" class="cart-empty">
-        Your cart is empty. Add items to begin checkout.
-      </p>
-
-      <div *ngIf="cart.length > 0" class="cart-items">
-        <div class="cart-item" *ngFor="let item of cart">
-          <div class="cart-item-info">
-            <div class="cart-item-name">{{ item.product.name }}</div>
-            <div class="cart-item-quantity">
-              <button
-                type="button"
-                class="qty-button"
-                (click)="decreaseQuantity(item.product.id)"
-              >
-                -
-              </button>
-              <span class="qty-value">{{ item.quantity }}</span>
-              <button
-                type="button"
-                class="qty-button"
-                (click)="increaseQuantity(item.product.id)"
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <div class="cart-item-price">
-            ${{ (item.product.price * item.quantity).toFixed(2) }}
-          </div>
-          <button
-            type="button"
-            class="cart-remove-button"
-            (click)="removeFromCart(item.product.id)"
-          >
-            Remove
-          </button>
-        </div>
-
-        <div class="cart-summary">
-          <div class="cart-total">
-            Total: ${{ cartTotal.toFixed(2) }}
-          </div>
-        </div>
-
-        <div *ngIf="paymentMessage" class="submit-message">
-          {{ paymentMessage }}
-        </div>
-        <div *ngIf="paymentError" class="submit-message error">
-          {{ paymentError }}
-        </div>
-
-        <div class="cart-actions">
-          <button
-            type="button"
-            class="checkout-button"
-            (click)="checkoutCart()"
-            [disabled]="isProcessingPayment"
-          >
-            {{ isProcessingPayment ? 'Redirecting to Payment...' : 'Checkout with Stripe' }}
-          </button>
-          <button type="button" class="reset-button" (click)="clearCart()">
-            Clear Cart
-          </button>
-        </div>
-      </div>
-    </div>
+    </aside>
   </div>
 </div>
