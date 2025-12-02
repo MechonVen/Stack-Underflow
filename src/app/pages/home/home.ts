@@ -9,10 +9,10 @@ import { EventCalendar } from '../calendar/calendar';
   template: `
     <section class="hero">
       <div class="hero-text">
-        <h1>Empowering Women Through Service and Advocacy</h1>
+        <h1>Zonta Club of Naples</h1>
         <p>
           The Zonta Club of Naples is dedicated to improving the lives of women and girls in our
-          community and around the world.
+          community and around the world. We aim to empower women through service and advocacy. 
         </p>
         <div class="cta-buttons">
           <a routerLink="/membership" class="btn primary">Join Now</a>
