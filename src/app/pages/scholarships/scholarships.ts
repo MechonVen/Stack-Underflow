@@ -30,14 +30,13 @@ export class Scholarships {
       name: 'Amelia Earhart Fellowship',
       amount: '$10,000',
       description:
-        'Awarded to women pursuing careers in science, technology, engineering, or mathematics (STEM).',
+        'Awarded to women pursuing Ph.D./doctoral degrees in aerospace engineering and space sciences.',
       eligibility: [
         'Women aged 18-30',
-        'Currently enrolled in accredited institution',
-        'Minimum 3.0 GPA',
-        'Demonstrated commitment to STEM field',
+        'Must be registered in a full-time Ph.D./doctoral program and have completed at least one year of that program',
+        'OR have received a master’s degree in an aerospace - applied field at the time the application is submitted.',
       ],
-      deadline: 'March 31, 2025',
+      deadline: 'Deadline to Apply for 2026 is closed. Please check back in August 2026.',
     },
     {
       id: 'young-women-leadership',
@@ -57,17 +56,17 @@ export class Scholarships {
     },
     {
       id: 'young-women',
-      name: 'Young Women in Business',
-      amount: '$5,000',
+      name: 'Young Women in STEM',
+      amount: '$10,000',
       description:
-        'Empowering young women entrepreneurs and business professionals in their career journey.',
+        'Awarded to women pursuing careers in science, technology, engineering, or mathematics (STEM).',
       eligibility: [
-        'Women aged 18-28',
-        'Pursuing business or entrepreneurship studies',
-        'Minimum 2.75 GPA',
-        'Business plan or career development goal required',
+        'Women aged 18-30',
+        'Currently enrolled in accredited institution',
+        'Minimum 3.0 GPA',
+        'Demonstrated commitment to STEM field',
       ],
-      deadline: 'May 31, 2025',
+      deadline: 'Jan 25, 2026',
     },
   ];
 
