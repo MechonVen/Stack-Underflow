@@ -9,10 +9,9 @@ import { EventCalendar } from '../calendar/calendar';
   template: `
     <section class="hero">
       <div class="hero-text">
-        <h1>Empowering Women Through Service and Advocacy</h1>
+        <h1>Zonta Club of Naples</h1>
         <p>
-          The Zonta Club of Naples is dedicated to improving the lives of women and girls in our
-          community and around the world.
+          We believe in making the world a better place by empowering women. 
         </p>
         <div class="cta-buttons">
           <a routerLink="/membership" class="btn primary">Join Now</a>
@@ -20,13 +19,11 @@ import { EventCalendar } from '../calendar/calendar';
         </div>
       </div>
     </section>
-
+    
     <section class="mission">
       <h2>Our Mission</h2>
       <p>
-        Zonta International is a global organization of professionals empowering women worldwide
-        through service and advocacy. The Naples Club proudly supports local scholarships,
-        mentorship programs, and fundraising for women’s initiatives.
+        Zonta Club of Naples is part of tens of thousands of professionals worldwide who demand gender equality and the end of violence against women and girls. We seek to eradicate human trafficking, domestic violence, and child marriage so no woman lives in fear. Zonta provides grants, resources, scholarships and services while advocating change, educating the community and helping direct responders and law enforcement. We say NO to violence and YES to equal opportunity and rights for women and girls of Collier County.
       </p>
     </section>
 

@@ -8,7 +8,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -16,9 +17,16 @@ html, body {
   font-family: 'Inter', sans-serif;
   color: #333;
   overflow-x: hidden;
+  background-color: white;
+  color-scheme: light;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
 }

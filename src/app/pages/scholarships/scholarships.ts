@@ -30,6 +30,35 @@ export class Scholarships {
       name: 'Amelia Earhart Fellowship',
       amount: '$10,000',
       description:
+        'Awarded to women pursuing Ph.D./doctoral degrees in aerospace engineering and space sciences.',
+      eligibility: [
+        'Women aged 18-30',
+        'Must be registered in a full-time Ph.D./doctoral program and have completed at least one year of that program',
+        'OR have received a master’s degree in an aerospace - applied field at the time the application is submitted.',
+      ],
+      deadline: 'Deadline to Apply for 2026 is closed. Please check back in August 2026.',
+    },
+    {
+      id: 'young-women-leadership',
+      name: 'Young Women in Leadership',
+      amount: '$10,000',
+      description:
+        'Recognizing young women who demonstrate active commitment to volunteerism and leadership in their communities and workplaces.',
+      eligibility: [
+        'Young women ages 16-19',
+        'Active commitment to volunteerism',
+        'Experience in local government, student government, or workplace leadership (paid or unpaid)',
+        'Volunteer leadership achievements',
+        'Knowledge of Zonta International and its programs',
+        "Support in Zonta International's mission of building a better world for women and girls",
+      ],
+      deadline: 'Now Open',
+    },
+    {
+      id: 'young-women',
+      name: 'Young Women in STEM',
+      amount: '$10,000',
+      description:
         'Awarded to women pursuing careers in science, technology, engineering, or mathematics (STEM).',
       eligibility: [
         'Women aged 18-30',
@@ -37,35 +66,7 @@ export class Scholarships {
         'Minimum 3.0 GPA',
         'Demonstrated commitment to STEM field',
       ],
-      deadline: 'March 31, 2025',
-    },
-    {
-      id: 'jane-addams',
-      name: 'Jane Addams Fellowship',
-      amount: '$7,500',
-      description:
-        'Supporting women leaders who are dedicated to community service and social advocacy.',
-      eligibility: [
-        'Women aged 18-35',
-        'Active in community or volunteer work',
-        'Enrolled in higher education or professional development',
-        'Demonstrated leadership qualities',
-      ],
-      deadline: 'April 30, 2025',
-    },
-    {
-      id: 'young-women',
-      name: 'Young Women in Business',
-      amount: '$5,000',
-      description:
-        'Empowering young women entrepreneurs and business professionals in their career journey.',
-      eligibility: [
-        'Women aged 18-28',
-        'Pursuing business or entrepreneurship studies',
-        'Minimum 2.75 GPA',
-        'Business plan or career development goal required',
-      ],
-      deadline: 'May 31, 2025',
+      deadline: 'Jan 25, 2026',
     },
   ];
 

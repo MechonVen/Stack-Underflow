@@ -93,10 +93,17 @@
   display: flex;
   gap: 1rem;
   column-count: initial;
+  overflow: hidden;
 
   img {
     flex: 1;
     margin-bottom: 0;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
   }
 }
 
