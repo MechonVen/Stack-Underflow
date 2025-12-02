@@ -8,14 +8,19 @@ import { RouterModule } from '@angular/router';
   template: `
     <header>
       <nav>
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-        <a routerLink="/about" routerLinkActive="active">Who We Are</a>
-        <a routerLink="/service" routerLinkActive="active">Service</a>
-        <a routerLink="/advocacy" routerLinkActive="active">Advocacy</a>
-        <a routerLink="/scholarships" routerLinkActive="active">Scholarships</a>
-        <a routerLink="/membership" routerLinkActive="active">Membership</a>
-        <a routerLink="/volunteer" routerLinkActive="active">Volunteer</a>
-        <a routerLink="/zonta-in-action" routerLinkActive="active">Zonta in Action</a>
+        <div class="logo-container">
+          <img src="https://cdn.builder.io/api/v1/image/assets%2Ff982a053b7a54180884f6ee8a9cbde51%2Feab2ab3192584e69a7af48f15fa1a5d1?format=webp&width=800" alt="Zonta Club of Naples" class="logo" />
+        </div>
+        <div class="nav-links">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          <a routerLink="/about" routerLinkActive="active">Who We Are</a>
+          <a routerLink="/service" routerLinkActive="active">Service</a>
+          <a routerLink="/advocacy" routerLinkActive="active">Advocacy</a>
+          <a routerLink="/scholarships" routerLinkActive="active">Scholarships</a>
+          <a routerLink="/membership" routerLinkActive="active">Membership</a>
+          <a routerLink="/volunteer" routerLinkActive="active">Volunteer</a>
+          <a routerLink="/zonta-in-action" routerLinkActive="active">Zonta in Action</a>
+        </div>
       </nav>
     </header>
 
