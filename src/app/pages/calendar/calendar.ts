@@ -51,30 +51,23 @@ export class EventCalendar implements OnInit {
   }
 
   ngOnInit() {
-    const today = new Date();
-    const currentYear = today.getFullYear();
-    const currentMonth = today.getMonth();
+    const currentYear = new Date().getFullYear();
 
     const decemberMeeting = this.getFirstTuesdayOfMonth(currentYear, 11);
     const januaryMeeting = this.getFirstTuesdayOfMonth(currentYear + 1, 0);
 
-    this.events = [];
-
-    if (decemberMeeting >= today) {
-      this.events.push({
+    this.events = [
+      {
         start: decemberMeeting,
         title: 'Zonta Monthly Meeting',
         description: 'Join us for our monthly board meeting and updates'
-      });
-    }
-
-    if (januaryMeeting >= today) {
-      this.events.push({
+      },
+      {
         start: januaryMeeting,
         title: 'Zonta Monthly Meeting',
         description: 'Join us for our monthly board meeting and updates'
-      });
-    }
+      }
+    ];
   }
 
   get upcomingEvents() {
