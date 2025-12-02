@@ -12,7 +12,7 @@ interface CalendarEvent {
   selector: 'app-calendar',
   imports: [CommonModule],
   templateUrl: './calendar.html',
-  styleUrls: ['./calendar.scss']
+  styleUrls: ['./calendar.scss'],
 })
 export class EventCalendar implements OnInit {
   events: CalendarEvent[] = [];
@@ -42,7 +42,7 @@ export class EventCalendar implements OnInit {
         meetings.push({
           start: meetingDate,
           title: 'Zonta Monthly Meeting',
-          description: 'Join us for our monthly board meeting and updates'
+          description: 'Join us for our monthly board meeting and updates',
         });
       }
     }
@@ -60,13 +60,13 @@ export class EventCalendar implements OnInit {
       {
         start: decemberMeeting,
         title: 'Zonta Monthly Meeting',
-        description: 'Join us for our monthly board meeting and updates'
+        description: 'Join us for our monthly board meeting and updates',
       },
       {
         start: januaryMeeting,
         title: 'Zonta Monthly Meeting',
-        description: 'Join us for our monthly board meeting and updates'
-      }
+        description: 'Join us for our monthly board meeting and updates',
+      },
     ];
   }
 

@@ -50,7 +50,7 @@ export class Scholarships {
         'Experience in local government, student government, or workplace leadership (paid or unpaid)',
         'Volunteer leadership achievements',
         'Knowledge of Zonta International and its programs',
-        'Support in Zonta International\'s mission of building a better world for women and girls',
+        "Support in Zonta International's mission of building a better world for women and girls",
       ],
       deadline: 'Now Open',
     },
