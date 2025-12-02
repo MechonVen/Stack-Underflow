@@ -10,10 +10,6 @@ import { EventCalendar } from '../calendar/calendar';
     <section class="hero">
       <div class="hero-text">
         <h1>Zonta Club of Naples</h1>
-        <p>
-          The Zonta Club of Naples is dedicated to improving the lives of women and girls in our
-          community and around the world. We aim to empower women through service and advocacy. 
-        </p>
         <div class="cta-buttons">
           <a routerLink="/membership" class="btn primary">Join Now</a>
           <a routerLink="/store" class="btn secondary">Donate</a>
@@ -24,9 +20,7 @@ import { EventCalendar } from '../calendar/calendar';
     <section class="mission">
       <h2>Our Mission</h2>
       <p>
-        Zonta International is a global organization of professionals empowering women worldwide
-        through service and advocacy. The Naples Club proudly supports local scholarships,
-        mentorship programs, and fundraising for women’s initiatives.
+        Zonta Naples is a division of a global organization of professionals who aim to empower women through service and advocacy. The Naples Club proudly supports local scholarships, mentorship programs, and fundraising for women’s initiatives. We are dedicated to improving the lives of women and girls in our community and around the world.
       </p>
     </section>
 
