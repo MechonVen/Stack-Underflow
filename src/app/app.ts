@@ -36,16 +36,35 @@ import { RouterModule } from '@angular/router';
 
     nav {
       display: flex;
-      justify-content: center;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 1rem;
       background-color: #eecd12ff;
-      padding: 0.75rem 1.5rem;
+      padding: 0.5rem 1.5rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       width: 100%;
       box-sizing: border-box;
       margin: 0;
+    }
+
+    .logo-container {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
       flex-wrap: nowrap;
       overflow-x: auto;
+      flex: 1;
     }
 
     nav a {
@@ -71,6 +90,22 @@ import { RouterModule } from '@angular/router';
       box-shadow: 0 4px 12px rgba(77, 75, 75, 0.15);
       font-weight: 600;
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      .nav-links {
+        width: 100%;
+      }
     }
 
     main { flex: 1; width: 100%; padding: 0; margin: 0; }
