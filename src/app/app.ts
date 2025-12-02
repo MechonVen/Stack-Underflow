@@ -32,23 +32,27 @@ import { RouterModule } from '@angular/router';
     nav {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.5rem;
       background-color: #eecd12ff;
-      padding: 1rem 2rem;
+      padding: 0.75rem 1.5rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       width: 100%;
       box-sizing: border-box;
       margin: 0;
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
     nav a {
       color: #a00505ff;
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.75rem;
       border-radius: 4px;
       transition: all 0.3s ease;
       font-weight: 700;
       text-transform: uppercase;
+      white-space: nowrap;
+      font-size: 0.9rem;
     }
 
     nav a:hover {
