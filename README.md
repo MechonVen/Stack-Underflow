@@ -1,4 +1,4 @@
-Code: [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/{PROJECT_ID}/badge)](https://www.bestpractices.dev/projects/{PROJECT_ID}) [![OpenSSF Scorecard](htt‌ps://api.securityscorecards.dev/projects/github.com/MechonVen/Stack-Underflow/badge)](htt‌ps://securityscorecards.dev/viewer/?uri=github.com/MechonVen/Stack-Underflow})
+Code: [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/{PROJECT_ID}/badge)](https://www.bestpractices.dev/projects/{PROJECT_ID}) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/MechonVen/Stack-Underflow/badge)](https://securityscorecards.dev/viewer/?uri=github.com/MechonVen/Stack-Underflow)
 
 # ZontaClubNaples
 
