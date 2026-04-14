@@ -1,3 +1,5 @@
+Code: [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/{PROJECT_ID}/badge)](https://www.bestpractices.dev/projects/{PROJECT_ID}) [![OpenSSF Scorecard](htt‌ps://api.securityscorecards.dev/projects/github.com/MechonVen/Stack-Underflow/badge)](htt‌ps://securityscorecards.dev/viewer/?uri=github.com/MechonVen/Stack-Underflow})
+
 # ZontaClubNaples
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
